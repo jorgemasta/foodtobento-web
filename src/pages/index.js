@@ -21,9 +21,9 @@ const IndexPage = ({ data }) => (
         }),url(${data.headerImage.childImageSharp.fluid.src})`,
       }}
     >
-      <div className="headerBackground">
+      <div>
         <div className="container">
-          <header>
+          {/*           <header>
             <div className="logo">
               <div className="appIconShadow">
                 <svg width="0" height="0">
@@ -53,7 +53,7 @@ const IndexPage = ({ data }) => (
                 )}
               </ul>
             </nav>
-          </header>
+          </header> */}
           <div
             className="iphonePreview"
             style={{
@@ -207,7 +207,9 @@ const IndexPage = ({ data }) => (
 
               {configs.linkedin_username && (
                 <a
-                  href={`https://www.linkedin.com/in/${configs.linkedin_username}`}
+                  href={`https://www.linkedin.com/in/${
+                    configs.linkedin_username
+                  }`}
                   aria-label="LinkedIn"
                 >
                   <span className="fa-stack fa-1x">
@@ -304,7 +306,7 @@ export const query = graphql`
         }
       }
     }
-    headerImage: file(relativePath: { eq: "headerimage.png" }) {
+    headerImage: file(relativePath: { eq: "headerimage.jpg" }) {
       childImageSharp {
         fluid(maxHeight: 714) {
           ...GatsbyImageSharpFluid

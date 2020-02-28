@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "food-to-bento"
+  },
+  "targets": {
+    "food-to-bento": {
+      "hosting": {
+        "batchcooking-landing": [
+          "batchcooking"
+        ]
+      }
+    }
+  }
+}
